@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="input">
+    <button class="button">click</button>
+    <script>
+        let input = document.querySelector('.input');
+        let button = document.querySelector('.button')
+        let previosValue = 1;
+
+        button.addEventListener("click", function() {
+            let currentValue = Number(input.value);
+            if(previosValue < currentValue){
+                for(i=previosValue;i<=currentValue;i++){
+                    console.log(i)
+                }
+            }
+            else if(previosValue > currentValue){
+                for(i=previosValue;i>=currentValue;i--){
+                    console.log(i)
+                }
+            }
+            else{
+                console.log(currentValue)
+            }
+
+            previosValue = currentValue
+        });
+    </script>
+</body>
+</html>
